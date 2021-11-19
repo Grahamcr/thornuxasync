@@ -40,7 +40,12 @@
   </head>
   <body>
     <div id="message">
-      <h2>Hello World, I am Thorn UX Async!</h2>
+      <form id="entryForm">
+        <label>title:</label>
+        <input id="title" type="text"></input>
+        <button type="submit">Submit</button>
+      </form>
+      
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
@@ -80,5 +85,28 @@
         }
       });
     </script>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyD-n5a7iFTIL6UdbaqC2KaImaKQBz66fAU",
+        authDomain: "ux-thorn.firebaseapp.com",
+        databaseURL: "https://ux-thorn-default-rtdb.firebaseio.com",
+        projectId: "ux-thorn",
+        storageBucket: "ux-thorn.appspot.com",
+        messagingSenderId: "184231153445",
+        appId: "1:184231153445:web:5ba29649192034d470d4cc"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+    </script>
+
+    <script src="main.js"></script>
   </body>
 </html>
